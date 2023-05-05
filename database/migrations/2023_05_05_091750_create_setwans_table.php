@@ -13,13 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('pegawais', function (Blueprint $table) {
+        Schema::create('setwans', function (Blueprint $table) {
             $table->id();
-            $table->char('nik')->unique();
-            $table->char('nama');
-            $table->char('alamat');
-            $table->char('jenis kelamin');
-            $table->char('tanggal lahir');
             $table->timestamps();
         });
     }
@@ -31,6 +26,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pegawais');
+        Schema::dropIfExists('setwans');
     }
 };

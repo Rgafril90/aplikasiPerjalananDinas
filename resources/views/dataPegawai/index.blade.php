@@ -1,14 +1,22 @@
 @extends('layout.master')
 
-@section('title', 'Data Perjalanan')
+@section('title', 'Data Pegawai')
 
 @section('content')
 
 
 <div class="card">
     <div class="card-header">
-        <h3 class="card-title">DataTable with default features</h3>
+        <a href="#" class="btn btn-primary">Tambah Data</a>
 
+        <div class="card-tools">
+            <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                <i class="fas fa-minus"></i>
+            </button>
+            <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
     </div>
 
     <div class="card-body">
@@ -16,32 +24,23 @@
             <thead>
                 <tr>
                     <th>No</th>
-                    <th>Nama</th>
                     <th>NIK</th>
-                    <th>Badan</th>
+                    <th>Nama</th>
+                    <th>Alamat</th>
+                    <th>Jenis Kelamin</th>
+                    <th>Tanggal Lahir</th>
                 </tr>
             </thead>
 
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Yusuf</td>
-                    <td>1621213456787</td>
-                    <td>Humas</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Yunus</td>
-                    <td>16212144448983</td>
-                    <td>Humas</td>
-                </tr>
-
-                <tr>
-                    <td>3</td>
-                    <td>yanto</td>
-                    <td>167787879990009</td>
-                    <td>Humas</td>
-                </tr>
+                @foreach($pegawais as $item)
+                <td>{{ $item->id }}</td>
+                <td>{{ $item->nik }}</td>
+                <td>{{ $item->nama }}</td>
+                <td>{{ $item->alamat }}</td>
+                <td>{{ $item->jenis_kelamin}}</td>
+                <td>{{ $item->tanggal_lahir}}</td>
+                @endforeach
             </tbody>
 
         </table>

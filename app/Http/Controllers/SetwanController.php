@@ -2,22 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\pegawai;
+use App\Models\setwan;
 use Illuminate\Http\Request;
 
-class PegawaiController extends Controller
+class SetwanController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    
-     //Method index()
     public function index()
     {
-        $pegawais = pegawai::all();
-        return view('dataPegawai.index')->with('pegawais', $pegawais);
+        //
     }
 
     /**
@@ -44,10 +41,10 @@ class PegawaiController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\pegawai  $pegawai
+     * @param  \App\Models\setwan  $setwan
      * @return \Illuminate\Http\Response
      */
-    public function show(pegawai $pegawai)
+    public function show(setwan $setwan)
     {
         //
     }
@@ -55,10 +52,10 @@ class PegawaiController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\pegawai  $pegawai
+     * @param  \App\Models\setwan  $setwan
      * @return \Illuminate\Http\Response
      */
-    public function edit(pegawai $pegawai)
+    public function edit(setwan $setwan)
     {
         //
     }
@@ -67,10 +64,10 @@ class PegawaiController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\pegawai  $pegawai
+     * @param  \App\Models\setwan  $setwan
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, pegawai $pegawai)
+    public function update(Request $request, setwan $setwan)
     {
         //
     }
@@ -78,10 +75,10 @@ class PegawaiController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\pegawai  $pegawai
+     * @param  \App\Models\setwan  $setwan
      * @return \Illuminate\Http\Response
      */
-    public function destroy(pegawai $pegawai)
+    public function destroy(setwan $setwan)
     {
         //
     }
