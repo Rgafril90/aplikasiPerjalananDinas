@@ -20,8 +20,8 @@ class PegawaiSeeder extends Seeder
                 'nik' => '2024250058',
                 'nama' => 'Riganda Saputra',
                 'alamat' => 'Plaju',
-                'jenis kelamin' => 'laki-laki',
-                'tanggal lahir' => '2000-12-11'
+                'jenis_kelamin' => 'laki-laki',
+                'tanggal_lahir' => '2000-12-11'
             ]
             );
     }

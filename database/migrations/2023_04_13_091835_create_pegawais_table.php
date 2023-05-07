@@ -18,8 +18,8 @@ return new class extends Migration
             $table->char('nik')->unique();
             $table->char('nama');
             $table->char('alamat');
-            $table->char('jenis kelamin');
-            $table->char('tanggal lahir');
+            $table->char('jenis_kelamin');
+            $table->char('tanggal_lahir');
             $table->timestamps();
         });
     }

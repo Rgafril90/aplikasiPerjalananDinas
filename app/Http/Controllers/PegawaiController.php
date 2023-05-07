@@ -27,7 +27,8 @@ class PegawaiController extends Controller
      */
     public function create()
     {
-        //
+        $pegawais = pegawai::all();
+        return view('dataPegawai.create')->with('pegawais', $pegawais);
     }
 
     /**
@@ -38,7 +39,26 @@ class PegawaiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // $this->authorize('create', pegawai::class);
+        // 1. validasi input data kosong
+        $validateData = $request->validate([
+            'nik' => 'required',
+            'nama' => 'required',
+            'alamat' => 'required',
+            'jenis_kelamin' => 'required',
+            'tanggal_lahir' => 'required'
+        ]);
+
+        // 2.Simpan data
+        $pegawai = new pegawai();
+        $pegawai->nik = $validateData['nik'];
+        $pegawai->nama = $validateData['nama'];
+        $pegawai->alamat = $validateData['alamat'];
+        $pegawai->jenis_kelamin = $validateData['jenis_kelamin'];
+        $pegawai->tanggal_lahir = $validateData['tanggal_lahir'];
+
+        $pegawai->save();
+        return redirect()->route('pegawai.index');
     }
 
     /**
@@ -72,7 +92,19 @@ class PegawaiController extends Controller
      */
     public function update(Request $request, pegawai $pegawai)
     {
-        //
+        //1.validasi input data kosong
+        // $validateData = $request->validate([
+        //     'nik' => 'required',
+        //     'nama' => 'required',
+        //     'alamat' => 'required',
+        //     'jenis_kelamin' => 'required',
+        //     'tanggal_lahir' => 'required'
+        // ]);
+
+        // 2.simpan perubahan
+        // pegawai::where('id', $pegawai->id)->update($validateData);
+        // $request->session()->flash('info',"Data Berhasil Disimpan")
+        // return redirect()->route('pegawai.index');
     }
 
     /**
