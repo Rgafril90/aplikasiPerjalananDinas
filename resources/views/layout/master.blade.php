@@ -127,6 +127,39 @@
 
                         </li>
 
+                        {{-- tabel Badan --}}
+                        <li class="nav-item">
+                            <a href="{{url ('dataBadan') }}" class="nav-link ">
+                                <i class="nav-icon fas fa-table"></i>
+                                <p>
+                                    Data Badan
+                                </p>
+                            </a>
+
+                        </li>
+
+                        {{-- tabel Badan --}}
+                        <li class="nav-item">
+                            <a href="{{url ('dataKomisi') }}" class="nav-link ">
+                                <i class="nav-icon fas fa-table"></i>
+                                <p>
+                                    Data Komisi
+                                </p>
+                            </a>
+
+                        </li>
+
+                        {{-- tabel Setwan --}}
+                        <li class="nav-item">
+                            <a href="{{url ('dataSetwan') }}" class="nav-link ">
+                                <i class="nav-icon fas fa-table"></i>
+                                <p>
+                                    Data Setwan
+                                </p>
+                            </a>
+
+                        </li>
+
                         {{-- tabel Perjalanan dinas --}}
                         <li class="nav-item">
                             <a href="{{url ('dataPerjalanan') }}" class="nav-link ">
@@ -139,14 +172,14 @@
                         </li>
 
                         {{-- Jumlah File --}}
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a href="{{url ('tambahDataPerjalanan')}}" class="nav-link">
                                 <i class="nav-icon fas fa-th"></i>
                                 <p>
                                     Tambah Data Perjalanan
                                 </p>
                             </a>
-                        </li>
+                        </li> --}}
 
                         <li class="nav-header">Keterangan</li>
 

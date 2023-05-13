@@ -5,6 +5,10 @@ use App\Http\Controllers\DataPerjalananController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\TambahDataPerjalananController;
 use App\Http\Controllers\PegawaiController;
+use App\Http\Controllers\BadanController;
+use App\Http\Controllers\KomisiController;
+use App\Http\Controllers\SetwanController;
+
 
 
 
@@ -39,3 +43,7 @@ Route::resource('dataPerjalanan', DataPerjalananController::class);
 Route::resource('dashboard', DashboardController::class);
 Route::resource('tambahDataPerjalanan', tambahDataPerjalananController::class);
 Route::resource('pegawai', pegawaiController::class);
+Route::resource('dataBadan', BadanController::class);
+Route::resource('dataKomisi', KomisiController::class);
+Route::resource('dataSetwan', SetwanController::class);
+

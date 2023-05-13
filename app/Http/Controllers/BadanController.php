@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\badan;
+use App\Models\dataPerjalanan;
 use Illuminate\Http\Request;
 
 class BadanController extends Controller
@@ -14,7 +15,8 @@ class BadanController extends Controller
      */
     public function index()
     {
-        //
+        $badans = badan::all();
+        return view('dataBadan.index')->with('badans', $badans);
     }
 
     /**

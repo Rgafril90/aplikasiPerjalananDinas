@@ -21,7 +21,7 @@ class DataPerjalananSeeder extends Seeder
                 'noSPPD' => '2024255888',
                 'tanggalSurat' => '2020-04-20',
                 'tanggalBerangkat' => '2002-4-22',
-                'komisi' => 'Humas dan Protokol',
+                'devisi' => 'Humas dan Protokol',
                 'nama' => 'Boy',
                 'prihal' => 'Kunjungan Silahturami'
             ]

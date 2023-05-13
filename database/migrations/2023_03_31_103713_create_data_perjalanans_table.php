@@ -19,7 +19,8 @@ return new class extends Migration
             $table->char('noSPPD');
             $table->date('tanggalSurat');
             $table->date('tanggalBerangkat');
-            $table->char('komisi');
+            // $table->foreignId('id_badan') -> constrained()->onDelete('restrict') -> onUpdate('restrict');
+            $table->char('devisi');
             $table->string('nama');
             $table->char('prihal');
             $table->timestamps();

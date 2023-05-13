@@ -14,7 +14,7 @@ class SetwanController extends Controller
      */
     public function index()
     {
-        //
+        return view('dataSetwan.index');
     }
 
     /**
